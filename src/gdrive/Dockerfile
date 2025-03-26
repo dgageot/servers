@@ -16,7 +16,6 @@ WORKDIR /app
 COPY --from=builder /app/dist /app/dist
 COPY --from=builder /app/package.json /app/package.json
 COPY --from=builder /app/package-lock.json /app/package-lock.json
-COPY src/gdrive/replace_open.sh /replace_open.sh
 
 ENV NODE_ENV=production
 
