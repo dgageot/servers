@@ -22,8 +22,4 @@ ENV NODE_ENV=production
 
 RUN npm ci --ignore-scripts --omit-dev
 
-RUN sh /replace_open.sh
-
-RUN rm /replace_open.sh
-
 ENTRYPOINT ["node", "dist/index.js"]
